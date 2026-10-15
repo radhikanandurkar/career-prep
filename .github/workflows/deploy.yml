@@ -45,10 +45,13 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: client/dist
+          path: ./client/dist/
+          include-hidden-files: true
+
 
       - name: Deploy website
         id: deployment
